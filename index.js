@@ -23,7 +23,7 @@
           im.setController(uploader(scope.ngModel));
           scope.ngModel = im.$controller;
 
-          for(let key of ["width", "height", "name", "format", "type"]) {
+          for(let key of ["width", "height", "name", "format", "mode"]) {
             if(attrs.hasOwnProperty(key)) {
               attrs.$observe(key, function(val) {
                   im.setAttribute(key, attrs[key]);
